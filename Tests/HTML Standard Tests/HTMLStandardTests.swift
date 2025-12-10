@@ -1,8 +1,9 @@
 // HTMLStandardTests.swift
 // HTML Standard Tests
 
-@testable import HTML_Standard
 import Testing
+
+@testable import HTML_Standard
 
 @Suite("HTML Standard")
 struct HTMLStandardTests {

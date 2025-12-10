@@ -14,4 +14,5 @@ public typealias Style = WHATWG_HTML_Metadata.Style
 public typealias Cite = WHATWG_HTML_TextSemantics.Cite
 public typealias Form = WHATWG_HTML_Forms.Form
 public typealias Label = WHATWG_HTML_Forms.Label
+public typealias Time = WHATWG_HTML_TextSemantics.Time
 public typealias Title = WHATWG_HTML_Document.Title

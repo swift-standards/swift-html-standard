@@ -17,7 +17,6 @@ This package serves as the recommended entry point for projects migrating from s
 - **Simplified imports**: Three focused products instead of 26 individual modules
 - **Complete WHATWG compliance**: Full backing by swift-whatwg-html implementation
 - **Flexible granularity**: Import everything, just attributes, or just elements
-- **Type aliases**: Convenient `HTMLElement` and `HTMLVoidElement` aliases
 - **Swift 6 concurrency**: Full Sendable conformance with strict concurrency mode
 - **Migration path**: Drop-in replacement for swift-html-standard with minimal changes
 

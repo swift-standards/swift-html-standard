@@ -6,7 +6,3 @@
 
 @_exported import WHATWG_HTML_Elements
 @_exported import WHATWG_HTML_Shared
-
-// Backward compatibility typealiases for HTMLElementTypes
-public typealias HTMLElement = WHATWG_HTML.Element
-public typealias HTMLVoidElement = WHATWG_HTML.VoidElement
