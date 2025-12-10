@@ -20,7 +20,7 @@ let package = Package(
         .library(name: "HTML Standard Elements", targets: ["HTML Standard Elements"])
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-standards/swift-whatwg-html", from: "0.1.0"),
+        .package(url: "https://github.com/swift-standards/swift-whatwg-html", from: "0.1.1"),
     ],
     targets: [
         .target(
