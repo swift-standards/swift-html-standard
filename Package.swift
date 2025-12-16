@@ -21,12 +21,14 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/swift-standards/swift-whatwg-html", from: "0.1.2"),
+        .package(url: "https://github.com/swift-standards/swift-standards", from: "0.10.0"),
     ],
     targets: [
         .target(
             name: "HTML Standard",
             dependencies: [
-                .product(name: "WHATWG HTML", package: "swift-whatwg-html")
+                .product(name: "WHATWG HTML", package: "swift-whatwg-html"),
+                .product(name: "Geometry", package: "swift-standards")
             ]
         ),
         .target(
