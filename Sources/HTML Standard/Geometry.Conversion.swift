@@ -33,7 +33,7 @@
 ///
 /// // Convert to CSS space using the space functor map
 /// let cssCircle: CSS.Circle = svgCircle.map { point in
-///     CSS.Point(x: point.x._rawValue, y: point.y._rawValue)
+///     CSS.Point(x: point.x.rawValue, y: point.y.rawValue)
 /// }
 /// ```
 ///
@@ -47,7 +47,7 @@
 ///
 /// // Convert to HTML space (note: HTML uses Int for pixel values)
 /// let htmlRect: HTML.DoubleRectangle = cssRect.map { point in
-///     HTML.DoublePoint(x: point.x._rawValue, y: point.y._rawValue)
+///     HTML.DoublePoint(x: point.x.rawValue, y: point.y.rawValue)
 /// }
 /// ```
 ///
