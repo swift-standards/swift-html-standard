@@ -8,7 +8,7 @@
 //  between different coordinate spaces (SVG, CSS, HTML).
 //
 
-@_exported public import Geometry
+@_exported public import Geometry_Primitives
 
 // MARK: - Cross-Domain Conversion Documentation
 

@@ -20,15 +20,15 @@ let package = Package(
         .library(name: "HTML Standard Elements", targets: ["HTML Standard Elements"])
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-standards/swift-whatwg-html", from: "0.2.2"),
-        .package(url: "https://github.com/swift-standards/swift-standards", from: "0.16.1"),
+        .package(path: "../swift-whatwg-html"),
+        .package(path: "../../swift-primitives/swift-geometry-primitives"),
     ],
     targets: [
         .target(
             name: "HTML Standard",
             dependencies: [
                 .product(name: "WHATWG HTML", package: "swift-whatwg-html"),
-                .product(name: "Geometry", package: "swift-standards")
+                .product(name: "Geometry Primitives", package: "swift-geometry-primitives")
             ]
         ),
         .target(
