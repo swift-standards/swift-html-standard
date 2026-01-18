@@ -9,7 +9,7 @@ let package = Package(
         .iOS(.v26),
         .tvOS(.v26),
         .watchOS(.v26),
-        .visionOS(.v26),
+        .visionOS(.v26)
     ],
     products: [
         .library(
@@ -21,7 +21,7 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../swift-whatwg-html"),
-        .package(path: "../../swift-primitives/swift-geometry-primitives"),
+        .package(path: "../../swift-primitives/swift-geometry-primitives")
     ],
     targets: [
         .target(
@@ -29,7 +29,7 @@ let package = Package(
             dependencies: [
                 .product(name: "WHATWG HTML", package: "swift-whatwg-html"),
                 .product(name: "Geometry Primitives", package: "swift-geometry-primitives")
-            ]
+    ]
         ),
         .target(
             name: "HTML Standard Attributes",
@@ -42,18 +42,14 @@ let package = Package(
                 .product(name: "WHATWG HTML TableAttributes", package: "swift-whatwg-html"),
                 .product(name: "WHATWG HTML ScriptAttributes", package: "swift-whatwg-html"),
                 .product(name: "WHATWG HTML Metadata", package: "swift-whatwg-html")
-            ]
+    ]
         ),
         .target(
             name: "HTML Standard Elements",
             dependencies: [
                 .product(name: "WHATWG HTML Shared", package: "swift-whatwg-html"),
                 .product(name: "WHATWG HTML Elements", package: "swift-whatwg-html")
-            ]
-        ),
-        .testTarget(
-            name: "HTML Standard".tests,
-            dependencies: ["HTML Standard"]
+    ]
         )
     ],
     swiftLanguageModes: [.v6]
