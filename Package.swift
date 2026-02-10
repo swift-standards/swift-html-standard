@@ -17,7 +17,8 @@ let package = Package(
             targets: ["HTML Standard"]
         ),
         .library(name: "HTML Standard Attributes", targets: ["HTML Standard Attributes"]),
-        .library(name: "HTML Standard Elements", targets: ["HTML Standard Elements"])
+        .library(name: "HTML Standard Elements", targets: ["HTML Standard Elements"]),
+        .library(name: "HTML Standard Test Support", targets: ["HTML Standard Test Support"]),
     ],
     dependencies: [
         .package(path: "../swift-whatwg-html"),
@@ -50,7 +51,15 @@ let package = Package(
                 .product(name: "WHATWG HTML Shared", package: "swift-whatwg-html"),
                 .product(name: "WHATWG HTML Elements", package: "swift-whatwg-html")
     ]
-        )
+        ),
+        .target(
+            name: "HTML Standard Test Support",
+            dependencies: [
+                "HTML Standard",
+                .product(name: "Geometry Primitives Test Support", package: "swift-geometry-primitives"),
+            ],
+            path: "Tests/Support"
+        ),
     ],
     swiftLanguageModes: [.v6]
 )
