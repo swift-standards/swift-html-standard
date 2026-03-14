@@ -64,7 +64,9 @@ let package = Package(
             name: "HTML Standard Tests",
             dependencies: [
                 "HTML Standard",
-            ]
+                "HTML Standard Test Support",
+            ],
+            path: "Tests/HTML Standard Tests"
         ),
     ],
     swiftLanguageModes: [.v6]
