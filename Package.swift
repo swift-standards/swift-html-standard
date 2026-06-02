@@ -21,8 +21,8 @@ let package = Package(
         .library(name: "HTML Standard Test Support", targets: ["HTML Standard Test Support"]),
     ],
     dependencies: [
-        .package(path: "../../swift-whatwg/swift-whatwg-html"),
-        .package(path: "../../swift-primitives/swift-geometry-primitives")
+        .package(url: "https://github.com/swift-whatwg/swift-whatwg-html.git", branch: "main"),
+        .package(url: "https://github.com/swift-primitives/swift-geometry-primitives.git", branch: "main")
     ],
     targets: [
         .target(
