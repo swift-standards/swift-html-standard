@@ -1,6 +1,6 @@
 # .github/metadata.yaml
 # Triaged by AI-assisted bulk pass (2026-04-29).
-description: "HTML standard wrapper providing unified access to WHATWG HTML implementation in Swift."
+description: "Unified wrapper over the WHATWG HTML Living Standard, with complete, attributes-only, and elements-only products, for Swift."
 topics:
   - standards
   - html
