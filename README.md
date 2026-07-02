@@ -7,7 +7,7 @@ Compatibility wrapper providing unified access to WHATWG HTML implementation wit
 
 ## Overview
 
-swift-html-standard is a lightweight wrapper around [swift-whatwg-html](https://github.com/swift-standards/swift-whatwg-html) that provides a simplified, unified API structure. It offers three main products for different use cases: complete HTML implementation, attributes-only, or elements-only.
+swift-html-standard is a lightweight wrapper around [swift-whatwg-html](https://github.com/swift-whatwg/swift-whatwg-html) that provides a simplified, unified API structure. It offers three main products for different use cases: complete HTML implementation, attributes-only, or elements-only.
 
 This package serves as the recommended entry point for projects migrating from swift-html-standard or seeking a simpler import structure than the modular swift-whatwg-html organization.
 
@@ -188,20 +188,20 @@ swift-html-standard/
 ## Related Packages
 
 ### Implementation
-- [swift-whatwg-html](https://github.com/swift-standards/swift-whatwg-html): Complete, modular WHATWG HTML Living Standard implementation
+- [swift-whatwg-html](https://github.com/swift-whatwg/swift-whatwg-html): Complete, modular WHATWG HTML Living Standard implementation
 
 ### Used By
-- [swift-html-css-pointfree](https://github.com/coenttb/swift-html-css-pointfree): Integration with pointfree-html for HTML generation
+- [swift-html-css-pointfree](https://github.com/swift-foundations/swift-html-css-pointfree): Integration with pointfree-html for HTML generation
 
 ### Dependencies
-- [swift-whatwg-html](https://github.com/swift-standards/swift-whatwg-html): WHATWG HTML implementation
-  - [swift-rfc-2045](https://github.com/swift-standards/swift-rfc-2045): RFC 2045 MIME types
-  - [swift-iso-8601](https://github.com/swift-standards/swift-iso-8601): ISO 8601 date/time
+- [swift-whatwg-html](https://github.com/swift-whatwg/swift-whatwg-html): WHATWG HTML implementation
+  - [swift-rfc-2045](https://github.com/swift-ietf/swift-rfc-2045): RFC 2045 MIME types
+  - [swift-iso-8601](https://github.com/swift-iso/swift-iso-8601): ISO 8601 date/time
   - [swift-standards](https://github.com/swift-standards/swift-standards): Shared utilities
 
 ## Contributing
 
-Contributions are welcome! This package is a thin wrapper, so most contributions should go to [swift-whatwg-html](https://github.com/swift-standards/swift-whatwg-html). For wrapper-specific issues:
+Contributions are welcome! This package is a thin wrapper, so most contributions should go to [swift-whatwg-html](https://github.com/swift-whatwg/swift-whatwg-html). For wrapper-specific issues:
 
 - Ensure changes maintain zero-cost abstraction
 - Tests pass with Swift 6.2
