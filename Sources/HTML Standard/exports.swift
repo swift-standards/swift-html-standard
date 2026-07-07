@@ -6,6 +6,7 @@
 @_exported import WHATWG_HTML
 @_exported import WHATWG_HTML_Attributes
 @_exported import WHATWG_HTML_Elements
+public import enum WHATWG_HTML_Shared.WHATWG_HTML
 
 public typealias HTML_Standard_Elements = WHATWG_HTML
 public typealias HTMLAttributeTypes = WHATWG_HTML
@@ -16,7 +17,4 @@ public typealias Form = WHATWG_HTML_Forms.Form
 public typealias Label = WHATWG_HTML_Forms.Label
 public typealias Time = WHATWG_HTML_TextSemantics.Time
 public typealias Title = WHATWG_HTML_Document.Title
-
-
-public import enum WHATWG_HTML_Shared.WHATWG_HTML
 public typealias HTML = WHATWG_HTML_Shared.WHATWG_HTML

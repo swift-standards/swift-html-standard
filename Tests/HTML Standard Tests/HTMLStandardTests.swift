@@ -118,7 +118,7 @@ extension HTML.Test.Unit {
     @Test
     func `Hidden has three states`() {
         #expect(Hidden.allCases.count == 3)
-        #expect(Hidden.empty.rawValue == "")
+        #expect(Hidden.empty.rawValue.isEmpty)
         #expect(Hidden.hidden.rawValue == "hidden")
         #expect(Hidden.untilFound.rawValue == "until-found")
     }
@@ -154,7 +154,7 @@ extension HTML.Test.Unit {
     func `Contenteditable has four states`() {
         #expect(Contenteditable.allCases.count == 4)
         #expect(Contenteditable.true.rawValue == "true")
-        #expect(Contenteditable.empty.rawValue == "")
+        #expect(Contenteditable.empty.rawValue.isEmpty)
         #expect(Contenteditable.false.rawValue == "false")
         #expect(Contenteditable.plaintextOnly.rawValue == "plaintext-only")
     }
@@ -244,7 +244,7 @@ extension HTML.Test.EdgeCase {
     @Test
     func `Id with empty string`() {
         let id: Id = ""
-        #expect(id.rawValue == "")
+        #expect(id.rawValue.isEmpty)
     }
 
     @Test
@@ -256,7 +256,7 @@ extension HTML.Test.EdgeCase {
     @Test
     func `Class from empty array literal`() {
         let cls: Class = []
-        #expect(cls.rawValue == "")
+        #expect(cls.rawValue.isEmpty)
     }
 
     @Test

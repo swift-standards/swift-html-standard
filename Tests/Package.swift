@@ -4,9 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "testing",
-    platforms: [
-        .macOS(.v26),
-    ],
+    platforms: [.macOS(.v26)],
     dependencies: [
         .package(path: ".."),
         .package(url: "https://github.com/swift-foundations/swift-testing.git", branch: "main"),

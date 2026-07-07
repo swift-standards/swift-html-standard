@@ -72,4 +72,4 @@ public enum GeometryConversion {
 /// the `HTML` namespace from WHATWG HTML.
 ///
 /// Note: After swift-whatwg-html is updated with the unified geometry
-/// types, users can access `HTML.Width`, `HTML.Height`, etc.
+/// types, users can access `HTML.Width`, `HTML.Height`, and related types.
