@@ -4,8 +4,7 @@
 import HTML_Standard
 import Testing
 
-@Suite(.serialized)
-struct HTMLStandardPerformanceTests {
+extension HTML.Test.Performance {
 
     @Test(.timed(iterations: 100, warmup: 10))
     func `StringAttribute creation from string literal`() {
