@@ -331,6 +331,12 @@ extension HTML.Test.Integration {
     }
 
     @Test
+    func `HTML Form resolves through the WHATWG_HTML nest alias`() {
+        #expect(HTML.Form.self == WHATWG_HTML.Form.self)
+        #expect(HTML.Form.self == WHATWG_HTML_Forms.Form.self)
+    }
+
+    @Test
     func `HTML Standard re-exports geometry via GeometryConversion namespace`() {
         #expect(GeometryConversion.self == GeometryConversion.self)
     }

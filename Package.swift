@@ -29,6 +29,7 @@ let package = Package(
             name: "HTML Standard",
             dependencies: [
                 .product(name: "WHATWG HTML", package: "swift-whatwg-html"),
+                .product(name: "WHATWG HTML Forms", package: "swift-whatwg-html"),
                 .product(name: "Geometry Primitives", package: "swift-geometry-primitives")
     ]
         ),

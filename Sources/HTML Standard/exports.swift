@@ -6,6 +6,7 @@
 @_exported import WHATWG_HTML
 @_exported import WHATWG_HTML_Attributes
 @_exported import WHATWG_HTML_Elements
+@_exported import WHATWG_HTML_Forms
 public import enum WHATWG_HTML_Shared.WHATWG_HTML
 
 public typealias HTML_Standard_Elements = WHATWG_HTML
