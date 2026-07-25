@@ -1,7 +1,7 @@
 # swift-html-standard
 
-[![CI](https://github.com/swift-standards/swift-html-standard/workflows/CI/badge.svg)](https://github.com/swift-standards/swift-html-standard/actions/workflows/ci.yml)
 ![Development Status](https://img.shields.io/badge/status-active--development-blue.svg)
+[![CI](https://github.com/swift-standards/swift-html-standard/workflows/CI/badge.svg)](https://github.com/swift-standards/swift-html-standard/actions/workflows/ci.yml)
 
 Compatibility wrapper providing unified access to WHATWG HTML implementation with familiar API structure.
 
