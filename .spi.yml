@@ -3,3 +3,5 @@ builder:
   configs:
   - documentation_targets:
     - HTML Standard
+    - HTML Standard Attributes
+    - HTML Standard Elements
