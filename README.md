@@ -32,6 +32,19 @@ dependencies: [
 ]
 ```
 
+Add the product to your target:
+
+```swift
+.target(
+    name: "App",
+    dependencies: [
+        .product(name: "HTML Standard", package: "swift-html-standard")
+    ]
+)
+```
+
+The package also vends `HTML Standard Elements` and `HTML Standard Attributes` for narrower imports.
+
 ## Quick Start
 
 ### Complete Implementation
