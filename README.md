@@ -164,8 +164,8 @@ Type names remain the same - only imports change.
 
 ## Requirements
 
-- Swift 6.2+
-- macOS 15.0+ / iOS 18.0+ / tvOS 18.0+ / watchOS 11.0+
+- Swift 6.3.3+
+- macOS 26.0+ / iOS 26.0+ / tvOS 26.0+ / watchOS 26.0+ / visionOS 26.0+
 - Swift 6 language mode with strict concurrency
 
 ## Architecture
@@ -217,7 +217,7 @@ swift-html-standard/
 Contributions are welcome! This package is a thin wrapper, so most contributions should go to [swift-whatwg-html](https://github.com/swift-whatwg/swift-whatwg-html). For wrapper-specific issues:
 
 - Ensure changes maintain zero-cost abstraction
-- Tests pass with Swift 6.2
+- Tests pass with Swift 6.3.3
 - Code follows existing style
 
 ## License
