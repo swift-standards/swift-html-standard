@@ -5,7 +5,7 @@ import Testing
 
 @testable import HTML_Standard
 
-// MARK: - HTML (typealias for WHATWG_HTML)
+// MARK: - HTML (typealias for WHATWG.HTML)
 
 extension HTML {
     @Suite
@@ -332,7 +332,7 @@ extension HTML.Test.Integration {
 
     @Test
     func `HTML Form resolves through the WHATWG_HTML nest alias`() {
-        #expect(HTML.Element.Form.self == WHATWG_HTML.Element.Form.self)
+        #expect(HTML.Element.Form.self == WHATWG.HTML.Element.Form.self)
     }
 
     @Test

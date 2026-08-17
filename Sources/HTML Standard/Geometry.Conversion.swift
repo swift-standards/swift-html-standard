@@ -56,7 +56,7 @@
 /// Each domain has its own coordinate space marker:
 /// - `W3C_SVG.Space` - SVG coordinate space
 /// - `W3C_CSS.Space` - CSS coordinate space
-/// - `WHATWG_HTML.Space` - HTML coordinate space
+/// - `WHATWG.HTML.Space` - HTML coordinate space
 ///
 /// These markers are phantom types that ensure type safety when working
 /// with geometry from different domains.
