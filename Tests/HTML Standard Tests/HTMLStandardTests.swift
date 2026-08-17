@@ -5,7 +5,7 @@ import Testing
 
 @testable import HTML_Standard
 
-// MARK: - HTML (typealias for WHATWG_HTML)
+// MARK: - HTML (typealias for WHATWG.HTML)
 
 extension HTML {
     @Suite
@@ -25,67 +25,67 @@ extension HTML.Test.Unit {
 
     @Test
     func `Id attribute name is id`() {
-        #expect(Id.attribute == "id")
+        #expect(HTML.Id.Attribute.attribute == "id")
     }
 
     @Test
     func `Id stores raw value from string literal`() {
-        let id: Id = "main-header"
+        let id: HTML.Id.Attribute = "main-header"
         #expect(id.rawValue == "main-header")
     }
 
     @Test
     func `Id description matches rawValue`() {
-        let id = Id("section-1")
+        let id = HTML.Id.Attribute("section-1")
         #expect(id.description == "section-1")
     }
 
     @Test
     func `Class attribute name is class`() {
-        #expect(Class.attribute == "class")
+        #expect(HTML.Class.Attribute.attribute == "class")
     }
 
     @Test
     func `Class from string literal`() {
-        let cls: Class = "container"
+        let cls: HTML.Class.Attribute = "container"
         #expect(cls.rawValue == "container")
     }
 
     @Test
     func `Class from array literal joins with spaces`() {
-        let cls: Class = ["note", "editorial", "highlighted"]
+        let cls: HTML.Class.Attribute = ["note", "editorial", "highlighted"]
         #expect(cls.rawValue == "note editorial highlighted")
     }
 
     @Test
     func `Lang attribute name is lang`() {
-        #expect(Lang.attribute == "lang")
+        #expect(HTML.Lang.Attribute.attribute == "lang")
     }
 
     @Test
     func `Lang common language constants`() {
-        #expect(Lang.english.rawValue == "en")
-        #expect(Lang.french.rawValue == "fr")
-        #expect(Lang.german.rawValue == "de")
-        #expect(Lang.japanese.rawValue == "ja")
-        #expect(Lang.arabic.rawValue == "ar")
+        #expect(HTML.Lang.Attribute.english.rawValue == "en")
+        #expect(HTML.Lang.Attribute.french.rawValue == "fr")
+        #expect(HTML.Lang.Attribute.german.rawValue == "de")
+        #expect(HTML.Lang.Attribute.japanese.rawValue == "ja")
+        #expect(HTML.Lang.Attribute.arabic.rawValue == "ar")
     }
 
     @Test
     func `Lang regional variants`() {
-        #expect(Lang.americanEnglish.rawValue == "en-US")
-        #expect(Lang.britishEnglish.rawValue == "en-GB")
+        #expect(HTML.Lang.Attribute.americanEnglish.rawValue == "en-US")
+        #expect(HTML.Lang.Attribute.britishEnglish.rawValue == "en-GB")
     }
 
     @Test
     func `Lang component init combines subtags`() {
-        let lang = Lang(language: "sr", script: "Cyrl", region: "RS")
+        let lang = HTML.Lang.Attribute(language: "sr", script: "Cyrl", region: "RS")
         #expect(lang.rawValue == "sr-Cyrl-RS")
     }
 
     @Test
     func `Lang component init with only language`() {
-        let lang = Lang(language: "nl")
+        let lang = HTML.Lang.Attribute(language: "nl")
         #expect(lang.rawValue == "nl")
     }
 
@@ -93,147 +93,147 @@ extension HTML.Test.Unit {
 
     @Test
     func `Dir attribute name is dir`() {
-        #expect(Dir.attribute == "dir")
+        #expect(HTML.Dir.Attribute.attribute == "dir")
     }
 
     @Test
     func `Dir has three direction values`() {
-        #expect(Dir.allCases.count == 3)
-        #expect(Dir.ltr.rawValue == "ltr")
-        #expect(Dir.rtl.rawValue == "rtl")
-        #expect(Dir.auto.rawValue == "auto")
+        #expect(HTML.Dir.Attribute.allCases.count == 3)
+        #expect(HTML.Dir.Attribute.ltr.rawValue == "ltr")
+        #expect(HTML.Dir.Attribute.rtl.rawValue == "rtl")
+        #expect(HTML.Dir.Attribute.auto.rawValue == "auto")
     }
 
     @Test
     func `Hidden attribute name is hidden`() {
-        #expect(Hidden.attribute == "hidden")
+        #expect(HTML.Hidden.Attribute.attribute == "hidden")
     }
 
     @Test
     func `Hidden default init produces hidden state`() {
-        let hidden = Hidden()
+        let hidden = HTML.Hidden.Attribute()
         #expect(hidden.rawValue == "hidden")
     }
 
     @Test
     func `Hidden has three states`() {
-        #expect(Hidden.allCases.count == 3)
-        #expect(Hidden.empty.rawValue.isEmpty)
-        #expect(Hidden.hidden.rawValue == "hidden")
-        #expect(Hidden.untilFound.rawValue == "until-found")
+        #expect(HTML.Hidden.Attribute.allCases.count == 3)
+        #expect(HTML.Hidden.Attribute.empty.rawValue.isEmpty)
+        #expect(HTML.Hidden.Attribute.hidden.rawValue == "hidden")
+        #expect(HTML.Hidden.Attribute.untilFound.rawValue == "until-found")
     }
 
     @Test
     func `Draggable attribute name is draggable`() {
-        #expect(Draggable.attribute == "draggable")
+        #expect(HTML.Draggable.Attribute.attribute == "draggable")
     }
 
     @Test
     func `Draggable has three states`() {
-        #expect(Draggable.allCases.count == 3)
-        #expect(Draggable.true.rawValue == "true")
-        #expect(Draggable.false.rawValue == "false")
-        #expect(Draggable.auto.rawValue == "auto")
+        #expect(HTML.Draggable.Attribute.allCases.count == 3)
+        #expect(HTML.Draggable.Attribute.true.rawValue == "true")
+        #expect(HTML.Draggable.Attribute.false.rawValue == "false")
+        #expect(HTML.Draggable.Attribute.auto.rawValue == "auto")
     }
 
     @Test
     func `Draggable from boolean literal`() {
-        let draggable: Draggable = true
+        let draggable: HTML.Draggable.Attribute = true
         #expect(draggable == .true)
 
-        let notDraggable: Draggable = false
+        let notDraggable: HTML.Draggable.Attribute = false
         #expect(notDraggable == .false)
     }
 
     @Test
     func `Contenteditable attribute name is contenteditable`() {
-        #expect(Contenteditable.attribute == "contenteditable")
+        #expect(HTML.Contenteditable.Attribute.attribute == "contenteditable")
     }
 
     @Test
     func `Contenteditable has four states`() {
-        #expect(Contenteditable.allCases.count == 4)
-        #expect(Contenteditable.true.rawValue == "true")
-        #expect(Contenteditable.empty.rawValue.isEmpty)
-        #expect(Contenteditable.false.rawValue == "false")
-        #expect(Contenteditable.plaintextOnly.rawValue == "plaintext-only")
+        #expect(HTML.Contenteditable.Attribute.allCases.count == 4)
+        #expect(HTML.Contenteditable.Attribute.true.rawValue == "true")
+        #expect(HTML.Contenteditable.Attribute.empty.rawValue.isEmpty)
+        #expect(HTML.Contenteditable.Attribute.false.rawValue == "false")
+        #expect(HTML.Contenteditable.Attribute.plaintextOnly.rawValue == "plaintext-only")
     }
 
     @Test
     func `Contenteditable from boolean literal`() {
-        let editable: Contenteditable = true
+        let editable: HTML.Contenteditable.Attribute = true
         #expect(editable == .true)
 
-        let notEditable: Contenteditable = false
+        let notEditable: HTML.Contenteditable.Attribute = false
         #expect(notEditable == .false)
     }
 
     @Test
     func `Autocapitalize attribute name is autocapitalize`() {
-        #expect(Autocapitalize.attribute == "autocapitalize")
+        #expect(HTML.Autocapitalize.Attribute.attribute == "autocapitalize")
     }
 
     @Test
     func `Autocapitalize has six modes`() {
-        #expect(Autocapitalize.allCases.count == 6)
-        #expect(Autocapitalize.none.rawValue == "none")
-        #expect(Autocapitalize.off.rawValue == "off")
-        #expect(Autocapitalize.sentences.rawValue == "sentences")
-        #expect(Autocapitalize.on.rawValue == "on")
-        #expect(Autocapitalize.words.rawValue == "words")
-        #expect(Autocapitalize.characters.rawValue == "characters")
+        #expect(HTML.Autocapitalize.Attribute.allCases.count == 6)
+        #expect(HTML.Autocapitalize.Attribute.none.rawValue == "none")
+        #expect(HTML.Autocapitalize.Attribute.off.rawValue == "off")
+        #expect(HTML.Autocapitalize.Attribute.sentences.rawValue == "sentences")
+        #expect(HTML.Autocapitalize.Attribute.on.rawValue == "on")
+        #expect(HTML.Autocapitalize.Attribute.words.rawValue == "words")
+        #expect(HTML.Autocapitalize.Attribute.characters.rawValue == "characters")
     }
 
     // MARK: Boolean Attributes
 
     @Test
     func `Autofocus attribute name is autofocus`() {
-        #expect(Autofocus.attribute == "autofocus")
+        #expect(HTML.Autofocus.Attribute.attribute == "autofocus")
     }
 
     @Test
     func `Autofocus default init is true`() {
-        let autofocus = Autofocus()
+        let autofocus = HTML.Autofocus.Attribute()
         #expect(autofocus.rawValue == true)
     }
 
     @Test
     func `Autofocus from boolean literal`() {
-        let on: Autofocus = true
+        let on: HTML.Autofocus.Attribute = true
         #expect(on.rawValue == true)
 
-        let off: Autofocus = false
+        let off: HTML.Autofocus.Attribute = false
         #expect(off.rawValue == false)
     }
 
     @Test
     func `Autofocus description reflects boolean state`() {
-        #expect(Autofocus(value: true).description == "true")
-        #expect(Autofocus(value: false).description == "false")
+        #expect(HTML.Autofocus.Attribute(value: true).description == "true")
+        #expect(HTML.Autofocus.Attribute(value: false).description == "false")
     }
 
     // MARK: Tabindex
 
     @Test
     func `Tabindex attribute name is tabindex`() {
-        #expect(Tabindex.attribute == "tabindex")
+        #expect(HTML.Tabindex.Attribute.attribute == "tabindex")
     }
 
     @Test
     func `Tabindex stores integer value`() {
-        let tab = Tabindex(5)
+        let tab = HTML.Tabindex.Attribute(5)
         #expect(tab.value == 5)
     }
 
     @Test
     func `Tabindex named constants`() {
-        #expect(Tabindex.notTabbable.value == -1)
-        #expect(Tabindex.inDocumentOrder.value == 0)
+        #expect(HTML.Tabindex.Attribute.notTabbable.value == -1)
+        #expect(HTML.Tabindex.Attribute.inDocumentOrder.value == 0)
     }
 
     @Test
     func `Tabindex description is string of value`() {
-        #expect(Tabindex(3).description == "3")
+        #expect(HTML.Tabindex.Attribute(3).description == "3")
     }
 }
 
@@ -243,78 +243,78 @@ extension HTML.Test.EdgeCase {
 
     @Test
     func `Id with empty string`() {
-        let id: Id = ""
+        let id: HTML.Id.Attribute = ""
         #expect(id.rawValue.isEmpty)
     }
 
     @Test
     func `Id with special characters`() {
-        let id = Id("my-id_123")
+        let id = HTML.Id.Attribute("my-id_123")
         #expect(id.rawValue == "my-id_123")
     }
 
     @Test
     func `Class from empty array literal`() {
-        let cls: Class = []
+        let cls: HTML.Class.Attribute = []
         #expect(cls.rawValue.isEmpty)
     }
 
     @Test
     func `Class from single element array literal`() {
-        let cls: Class = ["solo"]
+        let cls: HTML.Class.Attribute = ["solo"]
         #expect(cls.rawValue == "solo")
     }
 
     @Test
     func `Lang component init skips nil script subtag`() {
-        let lang = Lang(language: "en", region: "US")
+        let lang = HTML.Lang.Attribute(language: "en", region: "US")
         #expect(lang.rawValue == "en-US")
     }
 
     @Test
     func `Lang component init skips nil region subtag`() {
-        let lang = Lang(language: "en", script: "Latn")
+        let lang = HTML.Lang.Attribute(language: "en", script: "Latn")
         #expect(lang.rawValue == "en-Latn")
     }
 
     @Test
     func `Tabindex with negative value`() {
-        let tab = Tabindex(-5)
+        let tab = HTML.Tabindex.Attribute(-5)
         #expect(tab.value == -5)
         #expect(tab.description == "-5")
     }
 
     @Test
     func `Tabindex with maximum common value`() {
-        let tab = Tabindex(32767)
+        let tab = HTML.Tabindex.Attribute(32767)
         #expect(tab.value == 32767)
     }
 
     @Test
     func `StringAttribute dynamicMemberLookup forwards to String`() {
-        let id: Id = "hello"
+        let id: HTML.Id.Attribute = "hello"
         #expect(id.isEmpty == false)
         #expect(id.count == 5)
     }
 
     @Test
     func `StringAttribute Equatable distinguishes values`() {
-        let a: Dir = .ltr
-        let b: Dir = .ltr
-        let c: Dir = .rtl
+        let a: HTML.Dir.Attribute = .ltr
+        let b: HTML.Dir.Attribute = .ltr
+        let c: HTML.Dir.Attribute = .rtl
         #expect(a == b)
         #expect(a != c)
     }
 
     @Test
     func `StringAttribute Hashable deduplicates in Set`() {
-        let set: Set<Dir> = [.ltr, .rtl, .auto, .ltr]
+        let set: Set<HTML.Dir.Attribute> = [.ltr, .rtl, .auto, .ltr]
         #expect(set.count == 3)
     }
 
     @Test
     func `BooleanAttribute allCases has two entries`() {
-        #expect(Autofocus.allCases.count == 2)
+        #expect(HTML.Autofocus.Attribute.allCases.count == 2)
     }
 }
 
@@ -324,16 +324,15 @@ extension HTML.Test.Integration {
 
     @Test
     func `HTML Standard re-exports WHATWG_HTML elements`() {
-        #expect(HTML.Article.self == HTML.Article.self)
-        #expect(HTML.Section.self == HTML.Section.self)
-        #expect(HTML.Paragraph.self == HTML.Paragraph.self)
-        #expect(HTML.Form.self == HTML.Form.self)
+        #expect(HTML.Article.Element.self == HTML.Article.Element.self)
+        #expect(HTML.Section.Element.self == HTML.Section.Element.self)
+        #expect(HTML.Paragraph.Element.self == HTML.Paragraph.Element.self)
+        #expect(HTML.Form.Element.self == HTML.Form.Element.self)
     }
 
     @Test
     func `HTML Form resolves through the WHATWG_HTML nest alias`() {
-        #expect(HTML.Form.self == WHATWG_HTML.Form.self)
-        #expect(HTML.Form.self == WHATWG_HTML_Forms.Form.self)
+        #expect(HTML.Form.Element.self == WHATWG.HTML.Form.Element.self)
     }
 
     @Test
@@ -343,12 +342,12 @@ extension HTML.Test.Integration {
 
     @Test
     func `Multiple attribute types coexist without ambiguity`() {
-        let id: Id = "test"
-        let cls: Class = "container"
-        let lang: Lang = .english
-        let dir: Dir = .ltr
-        let hidden = Hidden()
-        let tabindex = Tabindex(0)
+        let id: HTML.Id.Attribute = "test"
+        let cls: HTML.Class.Attribute = "container"
+        let lang: HTML.Lang.Attribute = .english
+        let dir: HTML.Dir.Attribute = .ltr
+        let hidden = HTML.Hidden.Attribute()
+        let tabindex = HTML.Tabindex.Attribute(0)
 
         #expect(id.rawValue == "test")
         #expect(cls.rawValue == "container")
