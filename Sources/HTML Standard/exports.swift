@@ -12,10 +12,4 @@
 public typealias HTML_Standard_Elements = WHATWG_HTML
 public typealias HTMLAttributeTypes = WHATWG_HTML
 public typealias HTMLTypes = WHATWG_HTML
-public typealias Style = WHATWG_HTML_Metadata.Style
-public typealias Cite = WHATWG_HTML_TextSemantics.Cite
-public typealias Form = WHATWG_HTML_Forms.Form
-public typealias Label = WHATWG_HTML_Forms.Label
-public typealias Time = WHATWG_HTML_TextSemantics.Time
-public typealias Title = WHATWG_HTML_Document.Title
 public typealias HTML = WHATWG_HTML_Shared.WHATWG_HTML

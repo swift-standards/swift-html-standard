@@ -21,7 +21,7 @@ let package = Package(
         .library(name: "HTML Standard Test Support", targets: ["HTML Standard Test Support"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-whatwg/swift-whatwg-html.git", branch: "main"),
+        .package(url: "https://github.com/swift-whatwg/swift-whatwg-html.git", branch: "nest-element-attribute-types"),
         .package(url: "https://github.com/swift-primitives/swift-geometry-primitives.git", branch: "main")
     ],
     targets: [
