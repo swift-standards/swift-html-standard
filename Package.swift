@@ -1,15 +1,15 @@
-// swift-tools-version: 6.3.3
+// swift-tools-version: 6.4
 
 import PackageDescription
 
 let package = Package(
     name: "swift-html-standard",
     platforms: [
-        .macOS("27"),
-        .iOS("27"),
-        .tvOS("27"),
-        .watchOS("27"),
-        .visionOS("27")
+        .macOS(.v27),
+        .iOS(.v27),
+        .tvOS(.v27),
+        .watchOS(.v27),
+        .visionOS(.v27),
     ],
     products: [
         .library(
@@ -22,7 +22,10 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/swift-whatwg/swift-whatwg-html.git", branch: "main"),
-        .package(url: "https://github.com/swift-primitives/swift-geometry-primitives.git", branch: "main")
+        .package(
+            url: "https://github.com/swift-primitives/swift-geometry-primitives.git",
+            branch: "main"
+        ),
     ],
     targets: [
         .target(
@@ -30,8 +33,8 @@ let package = Package(
             dependencies: [
                 .product(name: "WHATWG HTML", package: "swift-whatwg-html"),
                 .product(name: "WHATWG HTML Forms", package: "swift-whatwg-html"),
-                .product(name: "Geometry Primitives", package: "swift-geometry-primitives")
-    ]
+                .product(name: "Geometry Primitives", package: "swift-geometry-primitives"),
+            ]
         ),
         .target(
             name: "HTML Standard Attributes",
@@ -43,21 +46,24 @@ let package = Package(
                 .product(name: "WHATWG HTML MediaAttributes", package: "swift-whatwg-html"),
                 .product(name: "WHATWG HTML TableAttributes", package: "swift-whatwg-html"),
                 .product(name: "WHATWG HTML ScriptAttributes", package: "swift-whatwg-html"),
-                .product(name: "WHATWG HTML Metadata", package: "swift-whatwg-html")
-    ]
+                .product(name: "WHATWG HTML Metadata", package: "swift-whatwg-html"),
+            ]
         ),
         .target(
             name: "HTML Standard Elements",
             dependencies: [
                 .product(name: "WHATWG HTML Shared", package: "swift-whatwg-html"),
-                .product(name: "WHATWG HTML Elements", package: "swift-whatwg-html")
-    ]
+                .product(name: "WHATWG HTML Elements", package: "swift-whatwg-html"),
+            ]
         ),
         .target(
             name: "HTML Standard Test Support",
             dependencies: [
                 "HTML Standard",
-                .product(name: "Geometry Primitives Test Support", package: "swift-geometry-primitives"),
+                .product(
+                    name: "Geometry Primitives Test Support",
+                    package: "swift-geometry-primitives"
+                ),
             ],
             path: "Tests/Support"
         ),
