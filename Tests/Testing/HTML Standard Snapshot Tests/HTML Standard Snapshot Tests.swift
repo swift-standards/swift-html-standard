@@ -1,6 +1,3 @@
-// HTML Standard Snapshot Tests.swift
-// HTML Standard Snapshot Tests
-
 import HTML_Standard
 import Testing
 

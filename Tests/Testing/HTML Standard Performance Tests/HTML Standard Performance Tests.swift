@@ -1,6 +1,3 @@
-// HTML Standard Performance Tests.swift
-// HTML Standard Performance Tests
-
 import HTML_Standard
 import Testing
 

@@ -1,8 +1,3 @@
-// exports.swift
-// HTML Standard
-//
-// Re-exports WHATWG HTML with compatibility type aliases
-
 @_exported import WHATWG_HTML
 @_exported import WHATWG_HTML_Attributes
 @_exported import WHATWG_HTML_Elements

@@ -1,11 +1,6 @@
-// HTML Standard Tests.swift
-// HTML Standard Tests
-
 import Testing
 
 @testable import HTML_Standard
-
-// MARK: - HTML (typealias for WHATWG.HTML)
 
 extension HTML {
     @Suite
@@ -17,11 +12,7 @@ extension HTML {
     }
 }
 
-// MARK: - Unit Tests
-
 extension HTML.Test.Unit {
-
-    // MARK: String Attributes
 
     @Test
     func `Id attribute name is id`() {
@@ -88,8 +79,6 @@ extension HTML.Test.Unit {
         let lang = HTML.Lang.Attribute(language: "nl")
         #expect(lang.rawValue == "nl")
     }
-
-    // MARK: Enumerated String Attributes
 
     @Test
     func `Dir attribute name is dir`() {
@@ -184,8 +173,6 @@ extension HTML.Test.Unit {
         #expect(HTML.Autocapitalize.Attribute.characters.rawValue == "characters")
     }
 
-    // MARK: Boolean Attributes
-
     @Test
     func `Autofocus attribute name is autofocus`() {
         #expect(HTML.Autofocus.Attribute.attribute == "autofocus")
@@ -212,8 +199,6 @@ extension HTML.Test.Unit {
         #expect(HTML.Autofocus.Attribute(value: false).description == "false")
     }
 
-    // MARK: Tabindex
-
     @Test
     func `Tabindex attribute name is tabindex`() {
         #expect(HTML.Tabindex.Attribute.attribute == "tabindex")
@@ -236,8 +221,6 @@ extension HTML.Test.Unit {
         #expect(HTML.Tabindex.Attribute(3).description == "3")
     }
 }
-
-// MARK: - Edge Case Tests
 
 extension HTML.Test.EdgeCase {
 
@@ -317,8 +300,6 @@ extension HTML.Test.EdgeCase {
         #expect(HTML.Autofocus.Attribute.allCases.count == 2)
     }
 }
-
-// MARK: - Integration Tests
 
 extension HTML.Test.Integration {
 
