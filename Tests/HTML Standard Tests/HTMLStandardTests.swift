@@ -305,14 +305,14 @@ extension HTML.Test.Integration {
 
     @Test
     func `HTML Standard re-exports WHATWG_HTML elements`() {
-        #expect(HTML.Article.Element.self == HTML.Article.Element.self)
-        #expect(HTML.Section.Element.self == HTML.Section.Element.self)
-        #expect(HTML.Paragraph.Element.self == HTML.Paragraph.Element.self)
-        #expect(HTML.Form.Element.self == HTML.Form.Element.self)
+        #expect(HTML.Article.Element.self == WHATWG.HTML.Article.Element.self)
+        #expect(HTML.Section.Element.self == WHATWG.HTML.Section.Element.self)
+        #expect(HTML.Paragraph.Element.self == WHATWG.HTML.Paragraph.Element.self)
+        #expect(HTML.Form.Element.self == WHATWG.HTML.Form.Element.self)
     }
 
     @Test
-    func `HTML Form resolves through the WHATWG_HTML nest alias`() {
+    func `HTML Form resolves through the canonical WHATWG namespace`() {
         #expect(HTML.Form.Element.self == WHATWG.HTML.Form.Element.self)
     }
 
