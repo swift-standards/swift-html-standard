@@ -23,7 +23,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/swift-whatwg/swift-whatwg-html.git", branch: "main"),
         .package(
-            url: "https://github.com/swift-primitives/swift-geometry-primitives.git",
+            url: "https://github.com/swift-molecules/swift-geometry.git",
             branch: "main"
         ),
     ],
@@ -33,7 +33,7 @@ let package = Package(
             dependencies: [
                 .product(name: "WHATWG HTML", package: "swift-whatwg-html"),
                 .product(name: "WHATWG HTML Forms", package: "swift-whatwg-html"),
-                .product(name: "Geometry Primitives", package: "swift-geometry-primitives"),
+                .product(name: "Geometry", package: "swift-geometry"),
             ]
         ),
         .target(
@@ -61,8 +61,8 @@ let package = Package(
             dependencies: [
                 "HTML Standard",
                 .product(
-                    name: "Geometry Primitives Test Support",
-                    package: "swift-geometry-primitives"
+                    name: "Geometry Test Support",
+                    package: "swift-geometry"
                 ),
             ],
             path: "Tests/Support"

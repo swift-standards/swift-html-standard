@@ -203,9 +203,6 @@ swift-html-standard/
 ### Implementation
 - [swift-whatwg-html](https://github.com/swift-whatwg/swift-whatwg-html): Complete, modular WHATWG HTML Living Standard implementation
 
-### Used By
-- [swift-html-css-pointfree](https://github.com/swift-foundations/swift-html-css-pointfree): Integration with pointfree-html for HTML generation
-
 ### Dependencies
 - [swift-whatwg-html](https://github.com/swift-whatwg/swift-whatwg-html): WHATWG HTML implementation
   - [swift-rfc-2045](https://github.com/swift-ietf/swift-rfc-2045): RFC 2045 MIME types
