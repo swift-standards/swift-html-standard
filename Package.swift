@@ -59,7 +59,7 @@ let package = Package(
         .target(
             name: "HTML Standard Test Support",
             dependencies: [
-                "HTML Standard",
+                .target(name: "HTML Standard"),
                 .product(
                     name: "Geometry Test Support",
                     package: "swift-geometry"
@@ -70,19 +70,14 @@ let package = Package(
         .testTarget(
             name: "HTML Standard Tests",
             dependencies: [
-                "HTML Standard",
-                "HTML Standard Test Support",
+                .target(name: "HTML Standard"),
+                .target(name: "HTML Standard Test Support"),
             ],
             path: "Tests/HTML Standard Tests"
         ),
     ],
     swiftLanguageModes: [.v6]
 )
-
-extension String {
-    var tests: Self { self + " Tests" }
-    var foundation: Self { self + " Foundation" }
-}
 
 for target in package.targets where ![.system, .binary, .plugin, .macro].contains(target.type) {
     let ecosystem: [SwiftSetting] = [
