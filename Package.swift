@@ -23,7 +23,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/swift-whatwg/swift-whatwg-html.git", branch: "main"),
         .package(
-            url: "https://github.com/swift-molecules/swift-geometry.git",
+            url: "https://github.com/swift-atoms/swift-geometry.git",
             branch: "main"
         ),
     ],
