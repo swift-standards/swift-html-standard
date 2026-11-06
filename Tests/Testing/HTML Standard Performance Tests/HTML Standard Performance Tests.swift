@@ -1,4 +1,5 @@
 import HTML_Standard
+import RFC_5646
 import Testing
 
 extension HTML.Test.Performance {
@@ -42,9 +43,9 @@ extension HTML.Test.Performance {
     }
 
     @Test(.timed(iterations: 100, warmup: 10))
-    func `Lang component init with subtags`() {
+    func `Lang component init with subtags`() throws {
         for _ in 0..<1000 {
-            let _ = HTML.Lang.Attribute(language: "zh", script: "Hans", region: "CN")
+            let _ = HTML.Lang.Attribute(language: try RFC_5646.LanguageTag("zh-Hans-CN"))
         }
     }
 

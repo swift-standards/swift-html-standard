@@ -22,6 +22,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/swift-whatwg/swift-whatwg-html.git", branch: "main"),
+        .package(url: "https://github.com/swift-ietf/swift-rfc-5646.git", branch: "main"),
         .package(
             url: "https://github.com/swift-atoms/swift-geometry.git",
             branch: "main",
@@ -73,6 +74,7 @@ let package = Package(
             dependencies: [
                 .target(name: "HTML Standard"),
                 .target(name: "HTML Standard Test Support"),
+                .product(name: "RFC 5646", package: "swift-rfc-5646"),
             ],
             path: "Tests/HTML Standard Tests"
         ),

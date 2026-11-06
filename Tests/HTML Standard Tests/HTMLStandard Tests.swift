@@ -1,3 +1,4 @@
+import RFC_5646
 import Testing
 
 @testable import HTML_Standard
@@ -69,14 +70,14 @@ extension HTML.Test.Unit {
     }
 
     @Test
-    func `Lang component init combines subtags`() {
-        let lang = HTML.Lang.Attribute(language: "sr", script: "Cyrl", region: "RS")
+    func `Lang component init combines subtags`() throws {
+        let lang = HTML.Lang.Attribute(language: try RFC_5646.LanguageTag("sr-Cyrl-RS"))
         #expect(lang.rawValue == "sr-Cyrl-RS")
     }
 
     @Test
-    func `Lang component init with only language`() {
-        let lang = HTML.Lang.Attribute(language: "nl")
+    func `Lang component init with only language`() throws {
+        let lang = HTML.Lang.Attribute(language: try RFC_5646.LanguageTag("nl"))
         #expect(lang.rawValue == "nl")
     }
 
@@ -249,14 +250,14 @@ extension HTML.Test.EdgeCase {
     }
 
     @Test
-    func `Lang component init skips nil script subtag`() {
-        let lang = HTML.Lang.Attribute(language: "en", region: "US")
+    func `Lang component init skips nil script subtag`() throws {
+        let lang = HTML.Lang.Attribute(language: try RFC_5646.LanguageTag("en-US"))
         #expect(lang.rawValue == "en-US")
     }
 
     @Test
-    func `Lang component init skips nil region subtag`() {
-        let lang = HTML.Lang.Attribute(language: "en", script: "Latn")
+    func `Lang component init skips nil region subtag`() throws {
+        let lang = HTML.Lang.Attribute(language: try RFC_5646.LanguageTag("en-Latn"))
         #expect(lang.rawValue == "en-Latn")
     }
 
