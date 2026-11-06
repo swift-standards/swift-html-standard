@@ -1,7 +1,9 @@
 import HTML_Standard
 import Testing
 
-extension HTML.Test {
+enum `HTML.Test Tests` {}
+
+extension `HTML.Test Tests` {
     @Suite(.serialized)
     struct Snapshot {
 

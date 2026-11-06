@@ -3,7 +3,9 @@ import Testing
 
 @testable import HTML_Standard
 
-extension HTML {
+enum `HTML Tests` {}
+
+extension `HTML Tests` {
     @Suite
     struct Test {
         @Suite struct Unit {}
@@ -13,7 +15,7 @@ extension HTML {
     }
 }
 
-extension HTML.Test.Unit {
+extension `HTML Tests`.Test.Unit {
 
     @Test
     func `Id attribute name is id`() {
@@ -223,7 +225,7 @@ extension HTML.Test.Unit {
     }
 }
 
-extension HTML.Test.EdgeCase {
+extension `HTML Tests`.Test.EdgeCase {
 
     @Test
     func `Id with empty string`() {
@@ -302,7 +304,7 @@ extension HTML.Test.EdgeCase {
     }
 }
 
-extension HTML.Test.Integration {
+extension `HTML Tests`.Test.Integration {
 
     @Test
     func `HTML Standard re-exports WHATWG_HTML elements`() {
