@@ -51,7 +51,7 @@ extension HTML.Test.Performance {
 
     @Test(.timed(iterations: 100, warmup: 10))
     func `Tabindex creation and description`() {
-        for i in 0..<1000 {
+        (0..<1000).forEach { i in
             let tab = HTML.Tabindex.Attribute(i)
             _ = tab.description
         }
