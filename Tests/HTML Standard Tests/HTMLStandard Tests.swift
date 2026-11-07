@@ -9,10 +9,13 @@ extension `HTML Tests` {
     @Suite
     struct Test {
         @Suite struct Unit {}
-        @Suite struct EdgeCase {}
         @Suite struct Integration {}
         @Suite(.serialized) struct Performance {}
     }
+}
+
+extension `HTML Tests`.Test {
+    @Suite struct EdgeCase {}
 }
 
 extension `HTML Tests`.Test.Unit {
