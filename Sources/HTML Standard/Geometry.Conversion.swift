@@ -1,4 +1,4 @@
-public import Geometry
+import Geometry
 
 public enum GeometryConversion {
 
